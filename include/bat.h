@@ -2,7 +2,7 @@
 #include "object.h"
 #include <raylib.h>
 
-constexpr float BAT_SPEED = 5.0F;
+constexpr float BAT_SPEED = 0.1F;
 
 class Bat
   :public Object
