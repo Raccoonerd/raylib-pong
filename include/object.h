@@ -35,5 +35,5 @@ public:
   void setColor(Color color);
 
   //Update
-  void update();
+  virtual void update();
 };

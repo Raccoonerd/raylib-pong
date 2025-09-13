@@ -36,6 +36,6 @@ void Object::setColor(Color color){
   m_color = color;
 }
 
-void Object::update(){
+ void Object::update(){
   updatePos();
 }
