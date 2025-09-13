@@ -28,6 +28,7 @@ public:
   [[nodiscard]] auto getSize() const -> Size;
   [[nodiscard]] auto getRectangle() const -> Rectangle;
   [[nodiscard]] auto getColor() const -> Color;
+  [[nodiscard]] auto getVelocity() const -> Vector2;
 
   // Setters
   void setPosition(Vector2 pos);

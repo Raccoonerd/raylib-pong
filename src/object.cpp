@@ -24,6 +24,10 @@ auto Object::getColor() const -> Color{
   return m_color;
 }
 
+auto Object::getVelocity() const -> Vector2{
+  return m_velocity;
+}
+
 void Object::setPosition(Vector2 pos){
   m_pos = pos;
 }
