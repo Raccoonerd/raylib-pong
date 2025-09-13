@@ -1,0 +1,16 @@
+build/
+cmake-build-*/
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+*.o
+*.so
+*.a
+
+Raylib
+raylib
+
+.DS_Store
