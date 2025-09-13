@@ -16,6 +16,9 @@ Game::~Game(){
 }
 
 void Game::run(){
-  m_update.update();
-  m_render.render();
+  while (!WindowShouldClose()) {
+    m_update.update();
+    m_render.render();
+  }
+  
 }

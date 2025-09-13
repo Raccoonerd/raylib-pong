@@ -45,3 +45,7 @@ void Ball::invertX(){
   t_vel.x *= -1;
   setVelocity(t_vel);
 }
+
+auto Ball::getRadius() const -> float {
+  return m_radius;
+}

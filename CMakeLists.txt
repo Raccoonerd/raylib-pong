@@ -13,6 +13,13 @@ find_package(raylib 4.5 REQUIRED)
 
 set(SOURCES
     src/main.cpp
+    src/ball.cpp
+    src/bat.cpp
+    src/game.cpp
+    src/logic.cpp
+    src/object.cpp
+    src/render.cpp
+    src/update.cpp
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})
@@ -26,10 +33,6 @@ target_link_libraries(${PROJECT_NAME}
   PRIVATE
   raylib
 )
-
-if (UNIX)
-    target_link_libraries(${PROJECT_NAME} m pthread dl)
-endif()
 
 add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_directory
