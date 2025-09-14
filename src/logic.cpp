@@ -7,8 +7,11 @@ void Logic::playSound(){}
 
 void Logic::update(){
   auto t_ballPos = m_rBall.getPosition();
-  auto t_ballCenter = Vector2{m_rBall.getRadius() + t_ballPos.x, m_rBall.getRadius() + t_ballPos.y};
-  
+  auto t_ballCenter = Vector2{
+    t_ballPos.x + m_rBall.getRadius(),
+    t_ballPos.y + m_rBall.getRadius()
+};
+ 
   if(CheckCollisionCircleRec(t_ballCenter, m_rBall.getRadius(), m_rBatR.getRectangle())){
     t_ballPos.x -= m_rBall.getRadius();
     m_rBall.setPosition(t_ballPos);

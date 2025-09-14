@@ -5,8 +5,10 @@
 class Logic{
 private:
   Ball& m_rBall;
-  Bat& m_rBatR, m_rBatL;
-  int m_ScoreR, m_ScoreL;
+  Bat& m_rBatR;
+  Bat& m_rBatL;
+  int m_ScoreR;
+  int m_ScoreL;
 
   void playSound();
 public:
