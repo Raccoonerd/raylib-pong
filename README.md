@@ -1,4 +1,2 @@
-# Just a raylib playgorund
+# Just a raylib pong game
 ___
-
-there will be some things i'll be trying in raylib
