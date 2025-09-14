@@ -6,7 +6,8 @@
 class Render{
 private:
   Ball& m_rBall;
-  Bat& m_rBatR, m_rBatL;
+  Bat& m_rBatR;
+  Bat& m_rBatL;
   Logic& m_rLogic;
 
   static void drawCenterLine();

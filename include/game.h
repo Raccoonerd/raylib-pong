@@ -8,14 +8,14 @@
 class Game{
 private:
   Ball m_ball;
-  Bat m_batR, m_batL;
+  Bat m_batL;
+  Bat m_batR;
   Logic m_logic;
   Update m_update;
   Render m_render;
 
 public:
   Game();
-  ~Game();
 
   void run();
 };

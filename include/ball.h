@@ -1,7 +1,7 @@
 #pragma once
 #include "object.h"
 
-constexpr float BALL_SPEED = 0.05F;
+constexpr float BALL_SPEED = 5.0F;
 
 class Ball
   :public Object
