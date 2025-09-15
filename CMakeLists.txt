@@ -20,6 +20,7 @@ set(SOURCES
     src/object.cpp
     src/render.cpp
     src/update.cpp
+    src/menu.cpp
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})

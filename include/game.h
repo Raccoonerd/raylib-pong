@@ -4,9 +4,19 @@
 #include "logic.h"
 #include "update.h"
 #include "render.h"
+#include "menu.h"
+
+enum class GameState{
+  MENU,
+  SINGLEPLAYER,
+  MULTIPLAYER,
+  EXIT
+};
 
 class Game{
 private:
+  GameState m_state;
+  Menu m_menu;
   Ball m_ball;
   Bat m_batL;
   Bat m_batR;
