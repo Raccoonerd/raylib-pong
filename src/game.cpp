@@ -30,6 +30,10 @@ void Game::run(){
     } else if(m_state == GameState::MULTIPLAYER || m_state == GameState::SINGLEPLAYER){
       m_update.update();
       m_render.render();
+
+      if (IsKeyPressed(KEY_Q)) {
+        m_state = GameState::MENU;
+      }
     } else if(m_state == GameState::EXIT){
       break;
     }

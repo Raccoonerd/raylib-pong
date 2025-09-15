@@ -15,4 +15,5 @@ public:
   Bat(Vector2 pos, Size size, KeyboardKey upKey, KeyboardKey downKey);
 
   void update() override;
+  void reset(Vector2 pos);
 };

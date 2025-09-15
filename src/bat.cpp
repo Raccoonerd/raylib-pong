@@ -30,3 +30,7 @@ void Bat::update() {
     setPosition(t_pos);
   }
 }
+
+void Bat::reset(Vector2 pos){
+  setPosition(pos);
+}

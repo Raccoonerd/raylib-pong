@@ -6,11 +6,13 @@ Logic::Logic(Ball& ball, Bat& batR, Bat& batL)
 void Logic::playSound(){}
 
 void Logic::update(){
+  auto t_batLPos = Vector2{50, (600/2) - 40};
+  auto t_batRPos = Vector2{800-50, (600/2) - 40};
   auto t_ballPos = m_rBall.getPosition();
   auto t_ballCenter = Vector2{
     t_ballPos.x + m_rBall.getRadius(),
     t_ballPos.y + m_rBall.getRadius()
-};
+  };
  
   if(CheckCollisionCircleRec(t_ballCenter, m_rBall.getRadius(), m_rBatR.getRectangle())){
     t_ballPos.x -= m_rBall.getRadius();
@@ -27,11 +29,15 @@ void Logic::update(){
   if (m_rBall.getPosition().x < 0) {
     m_ScoreR++;
     m_rBall.reset();
+    m_rBatL.reset(t_batLPos);
+    m_rBatR.reset(t_batRPos);
   }
 
   if (m_rBall.getPosition().x > static_cast<float>(GetScreenWidth())) {
     m_ScoreL++;
     m_rBall.reset();
+    m_rBatL.reset(t_batLPos);
+    m_rBatR.reset(t_batRPos);
   }
 }
 
