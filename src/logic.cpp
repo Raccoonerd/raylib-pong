@@ -1,7 +1,7 @@
 #include "../include/logic.h"
 
-Logic::Logic(Ball& ball, Bat& batR, Bat& batL)
-  :m_rBall(ball), m_rBatR(batR), m_rBatL(batL), m_ScoreR(0), m_ScoreL(0){}
+Logic::Logic(Ball& r_ball, Bat& r_batR, Bat& r_batL)
+  :m_rBall(r_ball), m_rBatR(r_batR), m_rBatL(r_batL), m_ScoreR(0), m_ScoreL(0){}
 
 void Logic::playSound(){}
 

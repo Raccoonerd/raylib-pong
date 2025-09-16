@@ -12,8 +12,14 @@ Game::Game()
 
 void Game::run(){
   m_ball.reset();
+
+  int t_frameCounter = 0;
+
   while (!WindowShouldClose()) {
+    t_frameCounter++;
+
     if (m_state == GameState::MENU) {
+      m_logic.reset();
       m_menu.update();
       BeginDrawing();
       ClearBackground(BLACK);
@@ -27,7 +33,19 @@ void Game::run(){
           case 2: m_state = GameState::EXIT; break;
         }
       }
-    } else if(m_state == GameState::MULTIPLAYER || m_state == GameState::SINGLEPLAYER){
+    } else if(m_state == GameState::SINGLEPLAYER){
+      m_batL.update();
+      m_batR.updateAI(m_ball, t_frameCounter);
+      m_ball.update();
+      m_logic.update();
+
+      m_render.render();
+
+      if (IsKeyPressed(KEY_Q)) {
+        m_state = GameState::MENU;
+      }
+ 
+    } else if(m_state == GameState::MULTIPLAYER){
       m_update.update();
       m_render.render();
 

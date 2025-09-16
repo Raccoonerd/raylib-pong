@@ -1,5 +1,6 @@
 #pragma once
 #include "object.h"
+#include "ball.h"
 #include <raylib.h>
 
 constexpr float BAT_SPEED = 6.0F;
@@ -15,5 +16,6 @@ public:
   Bat(Vector2 pos, Size size, KeyboardKey upKey, KeyboardKey downKey);
 
   void update() override;
+  void updateAI(const Ball& t_rBall, int t_frameCounter);
   void reset(Vector2 pos);
 };
